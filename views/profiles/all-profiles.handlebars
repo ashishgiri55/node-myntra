@@ -1,0 +1,46 @@
+<section>
+    <article class="container my-4 custom_block">
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Photo</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>alternate Address</th>
+                    <th>Gender</th>
+                    <th>Country</th>
+                    <th>Pincode</th>
+                    <th>Landmark</th>
+                    <th>Details</th>
+
+                </tr>
+            </thead>
+            {{#each profile}}
+            <tbody>
+                <tr>
+                    {{#if this.photo}}
+                    <td><img src="{{removeFirst6Char photo.0.path}}" /></td>
+                    {{else}}
+                    <td><img src="../../images/default-avatar.jpg" alt="default" /></td>
+                    {{/if}}
+
+                    <td>{{firstname}}</td>
+                    <td>{{lastname}}</td>
+                    <td>{{phone}}</td>
+                    <td>{{address}}</td>
+                    <td>{{alt_address}}</td>
+                    <td>{{gender}}</td>
+                    <td>{{country}}</td>
+                    <td>{{pincode}}</td>
+                    <td>{{landmark}}</td>
+                    <td><a href="/profile/user-details/{{_id}}" class="badge badge-primary p-2">Details</a></td>
+
+                </tr>
+            </tbody>
+            {{else}}
+            {{/each}}
+        </table>
+    </article>
+</section>

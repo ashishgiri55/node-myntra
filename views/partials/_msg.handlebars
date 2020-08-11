@@ -1,0 +1,53 @@
+{{#if success_msg}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>{{success_msg}}</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{{/if}}
+
+{{!-- success message block --}}
+
+{{#if errors_msg}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>{{errors_msg}}</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{{/if}}
+{{!-- error message block --}}
+
+{{#if warnings_msg}}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>{{warnings_msg}}</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{{/if}}
+{{!-- warning message block --}}
+
+{{#if error}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>{{error}}</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{{/if}}
+
+
+{{!-- error message block --}}
+
+{{#each errors}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>{{text}}</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+{{else}}
+{{/each}}

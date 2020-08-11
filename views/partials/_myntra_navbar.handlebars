@@ -1,0 +1,71 @@
+<div class="row">
+  <div class="col-md-5">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light pl-4 pr-4">
+      <a class="navbar-brand logo" href="/"><img src="../../images/myntra.png" style="width: 50px;" alt=""
+          class="myntra-logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto "
+          style="margin-left: 18px !important; margin-top:4px !important; font-weight:600">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Men <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Women</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Kids</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home & Living</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Essentials</a>
+          </li>
+         
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="col-md-4" style="margin-top: 8px;">
+    <form class="form-inline my-6 my-2 ml-auto">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="width: 1000px;">
+    </form>
+  </div>
+
+  <div class="col-md-3">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light pl-4 pr-4">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto "
+          style="margin-left: 18px !important; margin-top:5px !important; font-weight:700;font-size:15px">
+
+            {{#if user}}
+          <li class="nav-item" style="color: black;">
+            <a class="nav-link" href="/profile/create-profile">Add profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/profile/all-profiles">Profiles</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link  btn btn-dark text-white" href="/auth/logout">logout</a>
+          </li>
+
+           {{else}}
+         
+           <li class="nav-item">
+            <a class="nav-link" href="/auth/login">Login</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="auth/register">Register</a>
+          </li>
+          {{/if}}
+
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+

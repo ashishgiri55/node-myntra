@@ -14,7 +14,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
     "express-session": "^1.17.1",
-    "handlebars": "^4.7.6",
+    "handlebars": "^4.7.7",
     "jquery": "^3.5.1",
     "method-override": "^3.0.0",
     "mongoose": "^5.9.27",
